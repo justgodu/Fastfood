@@ -1,5 +1,6 @@
 package ge.edu.btu.fastfood;
 
+import ge.edu.btu.fastfood.exceptions.FastfoodException;
 import ge.edu.btu.fastfood.product.*;
 public class Order {
 	
@@ -31,8 +32,11 @@ public class Order {
 		this.products = orderproducts;
 	}
 	
-	public void addProduct(Product product) {
+	public void addProduct(Product product) throws FastfoodException{
 		
+		if(product == null) {
+			throw new FastfoodException("Can't add product which equals null ");
+		}
 		
 		int i; 
 		
@@ -46,6 +50,8 @@ public class Order {
         tempArray[prodsLength] = product; 
   
         this.products = tempArray; 
+        
+        
 	}
 	
 	public void removeProduct(int index) {

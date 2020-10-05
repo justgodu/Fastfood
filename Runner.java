@@ -2,8 +2,7 @@ package ge.edu.btu.fastfood;
 
 import ge.edu.btu.fastfood.product.*;
 import ge.edu.btu.fastfood.Order;
-
-
+import ge.edu.btu.fastfood.exceptions.*;
 public class Runner {
 	private static Product bigmack = new Burger("Big Mack", "Big burger with 2 story Burger", 8);
 	
@@ -49,15 +48,15 @@ public class Runner {
     	order.addProduct(orangeJuice);
     	
     	order.addProduct(pizzaMargherita);
-    	}catch(Exception ex) {
-    		System.out.println("Couldnt add new order " + ex);
+    	}catch(FastfoodException ex) {
+    		System.out.println("Couldnt add new order " + ex.getMessage());
     	}
     	try {
     	newOrder.setId(2);
     	
     	newOrder.addProduct(eveningMenu);
-    	}catch(Exception ex) {
-    		System.out.println("Couldnt add new order " + ex);
+    	}catch(FastfoodException ex) {
+    		System.out.println("Couldnt add new order " + ex.getMessage());
     	}
     	
     	
