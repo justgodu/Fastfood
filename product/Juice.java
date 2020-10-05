@@ -2,17 +2,18 @@ package ge.edu.btu.fastfood.product;
 
 public class Juice extends Product{
 	
-	private double litres;
+	
 	
 	
 	public Juice() {}
-	public Juice(String name, String description) {
-		super(name, description);
+	public Juice(String name, String description, double price , double liters) {
+		super(name, description,price* liters);
+		
 		
 	}
 	
 	@Override
 	public double getPrice() {
-		return this.litres * price;
+		return price;
 	}
 }

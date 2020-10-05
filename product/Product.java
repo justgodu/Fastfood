@@ -8,11 +8,14 @@ public abstract class Product {
 	
 	protected double price;
 	
+	
+	
 	public Product() {}
-	public Product(String name, String description) {
+	public Product(String name, String description, double price) {
 		this.name = name;
-		
+		this.price = price;
 		this.description = description;
+		
 		
 	}
 	

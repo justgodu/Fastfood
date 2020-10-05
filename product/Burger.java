@@ -2,24 +2,20 @@ package ge.edu.btu.fastfood.product;
 
 public class Burger extends Product{
 	
-	private double amount;
+	private static final int AMOUNT_COEFFICIENT = 1;
 	
 	
 	public Burger() {}
-	public Burger(String name, String description) {
-		super(name, description);
+	public Burger(String name, String description, double price ) {
+		super(name, description, price);
+		
+	
 		
 	}
-	public double getAmount() {
-		return this.amount;
-	}
 	
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
 	
 	@Override
 	public double getPrice() {
-		return this.amount * price;
+		return AMOUNT_COEFFICIENT * price;
 	}
 }
